@@ -1,107 +1,99 @@
-# Get editor completions based on the config schema
-# "$schema" = 'https://starship.rs/config-schema.json'
-
-add_newline = false
-palette = 'flexoki-dark'
-
 format = """
-[╭─](8)$os$username$hostname $directory$git_branch$fill$java$nodejs 
-[╰─](8)$character"""
+$directory $git_branch\
+$fill\
+$nodejs$rust$golang$php$bun$java$c$conda$zig$python $cmd_duration\
+\n$character"""
 
-[character]
-success_symbol = "[](fg:green)"
-error_symbol = "[](fg:red)"
+add_newline = true
 
-[fill]
-symbol = " "
+palette = "rose-pine"
 
-[os]
-format = "[](fg:blue)[$symbol](bg:blue fg:black)"
-disabled = false
-
-[os.symbols]
-Windows = " "
-Arch = " "
-
-[username]
-format = '[$user](bold fg:black bg:blue)'
-show_always = true
-
-[hostname]
-ssh_only = false
-format = "[@$hostname](bold fg:black bg:blue)[](blue)"
-disabled = false
-
-[cmd_duration]
-min_time = 0
-format = '[](blue)[󱦟 $duration](bold bg:blue fg:black)[ ](blue)'
-
-[directory]
-read_only = "  "
-style = "bold bg:white fg:black"
-truncation_length = 1
-# truncation_symbol = "••/"
-truncation_symbol = "../"
-truncate_to_repo = true
-format = '[](white)[ ]($style)[$path]($style)[](white)'
-
-[git_branch]
-style = "bg: green"
-symbol = "󰘬"
-# truncation_length = 4
-# truncation_symbol = ""
-format = " [](green)[$symbol $branch(:$remote_branch)](bold fg:black bg:green)[](green)"
-
-# Disable the package module, hiding it from the prompt completely
-[package]
-disabled = true
-
-[palettes.catppuccin_mocha]
+[palettes.catppuccin-mocha]
 red = "#f38ba8"
 green = "#a6e3a1"
 blue = "#89b4fa"
 black = "#1e1e2e"
 white = "#cdd6f4"
+yellow = "#f9e2af"
 
 [palettes.rose-pine]
-black = '#191724'
-white = '#e0def4'
-blue = '#31748f'
-green = '#9ccfd8'
-red = '#eb6f92'
+red = "#eb6f92"
+green = "#9ccfd8"
+blue = "#31748f"
+black = "#191724"
+white = "#e0def4"
+yellow = "#f6c177"
 
-[palettes.flexoki-dark]
-black = '#100F0F'
-white = '#CECDC3'
-blue = '#4385BE'
-green = '#879A39'
-red = '#D14D41'
+[fill]
+symbol = ' '
 
-#0 = Black
-#1 = Red
-#2 = Green
-#3 = Yellow
-#4 = Blue
-#5 = Magenta
-#6 = Cyan
-#7 = Light Gray
-#8 = Dark Gray (a veces considerado como un gris plomo)
-#9 = Light Red
-#10 = Light Green
-#11 = Light Yellow
-#12 = Light Blue
-#13 = Light Magenta
-#14 = Light Cyan
-#15 = White
-#
-#
+[character]
+success_symbol = "[󱞩](green)"
+error_symbol = "[󱞩](red)"
+
+[directory]
+format = "[$path](bold blue)"
+truncation_length = 1
+truncation_symbol = "../"
+truncate_to_repo = true
+
+[cmd_duration]
+format = "took [ $duration]($style)"
+style = "bold fg:white"
+min_time = 500
+
+[git_branch]
+format = "-> [$symbol$branch](bold green) "
+symbol = " "
+
+[git_status]
+format = '[$all_status$ahead_behind ]($style)'
+style = "fg:white bg:git"
+
+[docker_context]
+disabled = true
+symbol = " "
+
+[python]
+disabled = false
+format = '[${symbol}${pyenv_prefix}(${version})( \($virtualenv\))](yellow)'
+symbol = " "
+version_format = "${raw}"
 
 [java]
-format = '[](red)[$symbol $version](bold fg:black bg:red)[](red)'
+format = '[$symbol$version](red)'
 version_format = "${raw}"
-symbol = ""
+symbol = " "
+
+[c]
+format = '[[ $symbol ($version) ](fg:#7FB4CA)]($style)'
+symbol = " "
+version_format = "${raw}"
+disabled = false
+
+[zig]
+format = '[[ $symbol ($version) ](fg:#FFA066)]($style)'
+version_format = "${raw}"
+disabled = false
+
+[bun]
+version_format = "${raw}"
+format = '[[ $symbol ($version) ](fg:#DCD7BA)]($style)'
 disabled = false
 
 [nodejs]
-symbol = ""
-format = '[](green)[$symbol $version](bold fg:black bg:green)[](green)'
+symbol = " "
+format = '[$symbol($version)](green)'
+version_format = "${raw}"
+
+[rust]
+symbol = ""
+format = '[[ $symbol ($version) ](fg:#FF5D62)]($style)'
+
+[golang]
+symbol = ""
+format = '[[ $symbol ($version) ](fg:#7FB4CA)]($style)'
+
+[php]
+symbol = ""
+format = '[[ $symbol ($version) ](fg:#FF9E3B)]($style)'

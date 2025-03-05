@@ -1,0 +1,50 @@
+layout {
+  tab name="nvim" focus=true {
+    pane
+  }
+
+  tab name="shell" {
+    pane
+  }
+  tab name="extra" {
+    pane
+  }
+  default_tab_template {
+    pane size=1 borderless=true {
+      plugin location="https://github.com/dj95/zjstatus/releases/latest/download/zjstatus.wasm"{
+        format_left   "{mode} #[fg=#191724,bg=#c4a7e7,bold] {session} #[fg=#c4a7e7,bg=#191724]{tabs}"
+        format_right  "{command_git_branch} {datetime}"
+        format_space  ""
+
+        border_enabled  "false"
+        border_char     "─"
+        border_format   "#[fg=#161617]{char}"
+        border_position "top"
+
+        hide_frame_for_single_pane "true"
+        mode_normal  "#[bg=#9ccfd8] "
+        mode_tmux    "#[bg=#eb6f92] "
+
+        tab_normal              "#[fg=#191724,bg=#e0def4] #[fg=#191724,bg=#e0def4]{index}  {name} #[fg=#e0def4,bg=#191724]"
+        tab_normal_fullscreen   "#[fg=#6C7086,bg=#181825] {index} {name} [] "
+        tab_normal_sync         "#[fg=#6C7086,bg=#181825] {index} {name} <> "
+        tab_active              "#[fg=#191724,bg=#31748f,bold,italic] {index}  {name} #[fg=#31748f, bg=#191724]"
+        tab_active_fullscreen   "#[fg=#9399B2,bg=#181825,bold,italic] {index} {name} [] "
+        tab_active_sync         "#[fg=#9399B2,bg=#181825,bold,italic] {index} {name} <> "
+
+        command_git_branch_command     "git rev-parse --abbrev-ref HEAD"
+        command_git_branch_format      "#[fg=#85B5BA] {stdout} "  
+        command_git_branch_interval    "10"
+        command_git_branch_rendermode  "static"
+
+        datetime        "#[fg=#cdd6f4,bold] {format} "  
+        datetime_format "%A, %d %b %Y %H:%M"
+        datetime_timezone "America/La_Paz"
+      }
+    }
+    children
+      pane size=1 borderless=true  {
+        plugin location="zellij:status-bar"
+      }
+  }
+}
