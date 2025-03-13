@@ -2,7 +2,6 @@ return {
   {
     "catppuccin/nvim",
     name = "catppuccin",
-    priority = 1000,
     opts = {
       transparent_background = true,
     },
@@ -17,11 +16,21 @@ return {
     },
   },
   {
+    "navarasu/onedark.nvim",
+    opts = {
+      sytle = "warmer"
+    }
+  },
+  {
+    "folke/tokyonight.nvim",
+    opts = {},
+  },
+  {
     -- LazyVim configuration
     "LazyVim/LazyVim",
     opts = {
       -- Set the default color scheme
-      colorscheme = "rose-pine",
+      colorscheme = "tokyonight-night",
     },
   },
 }
