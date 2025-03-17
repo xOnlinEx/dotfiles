@@ -1,0 +1,18 @@
+# Font
+font-family="SpaceMono Nerd Font"
+font-size=13
+
+# Window
+window-padding-x = 10
+window-padding-y = 10
+window-padding-color = extend
+window-padding-balance = true
+window-step-resize = true
+window-theme = system
+
+# Theme
+theme = dark:Jellybeans,light:Jellybeans
+
+# Background
+background-opacity = 1.0
+# background-blur-radius = 20
