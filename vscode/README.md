@@ -7,6 +7,7 @@
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.cursorSurroundingLines": 4,
     "editor.fontFamily": "Iosevka Nerd Font",
+    "editor.fontLigatures": true,
     "editor.fontSize": 20,
     "editor.guides.bracketPairs": "active",
     "editor.lineNumbers": "relative",
@@ -15,16 +16,16 @@
     "editor.scrollbar.vertical": "hidden",
     "editor.scrollbar.verticalScrollbarSize": 0,
     "editor.stickyScroll.enabled": false,
-    "editor.rulers": [
-        80
-    ],
     "telemetry.telemetryLevel": "off",
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.fontFamily": "Iosevka Nerd Font",
+    "terminal.integrated.fontLigatures.enabled": true,
     "terminal.integrated.fontSize": 20,
     "window.commandCenter": false,
+    "window.customTitleBarVisibility": "never",
     "window.menuBarVisibility": "toggle",
+    "window.titleBarStyle": "native",
     "workbench.activityBar.location": "top",
     "workbench.editor.showTabs": "single",
     // vim setting
