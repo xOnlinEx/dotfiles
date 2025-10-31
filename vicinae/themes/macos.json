@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "appearance": "dark",
+  "icon": "./catppuccin.webp",
+  "name": "mac-dark",
+  "description": "Theme apple",
+  "palette": {
+    "background": "#1C1C1E",
+    "foreground": "#e6e1e7",
+    "blue": "#0091FF",
+    "green": "#30D158",
+    "magenta": "#FF375F",
+    "orange": "#FF9230",
+    "purple": "#DB34F2",
+    "red": "#FF4245",
+    "yellow": "#FFD600",
+    "cyan": "#3CD3FE"
+  }
+}
