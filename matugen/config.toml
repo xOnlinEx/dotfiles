@@ -1,0 +1,30 @@
+[config.wallpaper]
+command = "swww"
+arguments = ["img",
+  "--transition-type", "center",
+  "--transition-step", "15",
+  "--transition-fps", "180",
+]
+set = true
+
+[templates.hyprland]
+input_path = "~/.config/matugen/templates/hyprland-colors.conf"
+output_path = "~/.config/hypr/colors.conf"
+post_hook = "hyprctl reload"
+
+#[templates.ghostty]
+#input_path = "~/.config/matugen/templates/ghostty-colors"
+#output_path = "~/.config/ghostty/themes/custom"
+
+#[templates.gtk3]
+#input_path = '~/.config/matugen/templates/gtk-colors.css'
+#output_path = '~/.config/gtk-3.0/colors.css'
+#post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
+
+[templates.gtk4]
+input_path = '~/.config/matugen/templates/gtk-colors.css'
+output_path = '~/.config/gtk-4.0/colors.css'
+
+#[templates.ignis]
+#input_path = '~/.config/matugen/templates/ignis-colors.scss'
+#output_path = '~/.config/ignis/_colors.scss'
