@@ -1,0 +1,56 @@
+{
+    "breadcrumbs.enabled": false,
+    "editor.bracketPairColorization.enabled": false,
+    "editor.cursorBlinking": "solid",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorStyle": "line",
+    "editor.cursorSurroundingLines": 4,
+    "editor.fontFamily": "ZedMono Nerd Font",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 20,
+    "editor.guides.bracketPairs": "active",
+    "editor.guides.bracketPairsHorizontal": false,
+    "editor.lineNumbers": "relative",
+    "editor.matchBrackets": "never",
+    "editor.minimap.enabled": false,
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.verticalScrollbarSize": 0,
+    "editor.stickyScroll.enabled": false,
+    "editor.tabSize": 2,
+    "terminal.integrated.fontFamily": "ZedMono Nerd Font",
+    "terminal.integrated.fontSize": 20,
+    "vim.useSystemClipboard": true,
+    "window.customTitleBarVisibility": "never",
+    "window.menuBarVisibility": "toggle",
+    "window.titleBarStyle": "native",
+    "workbench.activityBar.location": "top",
+    "workbench.editor.showTabs": "single",
+    "vim.handleKeys": {
+        "<C-b>": false,
+        "<C-k>": false,
+        "<C-p>": false,
+        "<C-j>": false,
+    },
+    "workbench.colorTheme": "Vesper",
+    // custom colors
+    "workbench.colorCustomizations": {
+        "editor.lineHighlightBackground": "#1C1C1E",
+        "editor.lineHighlightBorder": "#1C1C1E",
+        "editorLineNumber.activeForeground": "#FFFFFF"
+    },
+    // Ocultar elementos visuales adicionales
+    "editor.renderLineHighlight": "line", // Solo resalta el número de línea, no toda la línea
+    "editor.occurrencesHighlight": "off", // Sin resaltado de ocurrencias
+    "editor.selectionHighlight": false, // Sin resaltado de selecciones similares
+    "editor.renderWhitespace": "none", // Sin mostrar espacios/tabs
+    "editor.glyphMargin": true, // Sin margen para breakpoints
+    "editor.folding": true, // Sin botones de plegado de código
+    // Suavizar experiencia
+    "editor.smoothScrolling": true,
+    "workbench.list.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+    // Reducir distracciones
+    "editor.hover.delay": 1000, // Retraso para mostrar hover (menos distracción)
+    "editor.lightbulb.enabled": "off", // Sin bombilla de sugerencias
+    "editor.parameterHints.enabled": false, // Sin hints de parámetros (opcional, puede ser útil)
+}
