@@ -1,0 +1,9 @@
+[user]
+  name = xOnlinEx
+  email = daniel.floresvargas666@gmail.com
+
+[init]
+  defaultBranch = dev
+
+[url "git@github.com:"]
+  insteadOf = "gh:"
