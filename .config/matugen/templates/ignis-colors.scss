@@ -1,0 +1,8 @@
+/*
+* Css Colors
+* Generated with Matugen
+*/
+<* for name, value in colors *>
+${{name}}: {{value.default.rgba}};
+<* endfor *>
+$background-alt: {{colors.on_background.default.rgba | set_alpha: 0.05}}

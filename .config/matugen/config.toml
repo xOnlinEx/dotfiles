@@ -1,0 +1,40 @@
+[config.wallpaper]
+command = "swww"
+arguments = ["img",
+  "--transition-type", "center",
+  "--transition-step", "15",
+  "--transition-fps", "180",
+]
+set = false
+
+[templates.hyprland]
+input_path = "~/.config/matugen/templates/hyprland-colors.conf"
+output_path = "~/.config/hypr/colors.conf"
+post_hook = "hyprctl reload"
+
+[templates.vicinae]
+input_path = '~/.config/matugen/templates/vicinae.toml'
+output_path = '~/.local/share/vicinae/themes/matugen.toml'
+post_hook = 'vicinae theme set matugen'
+
+# [templates.ghostty]
+# input_path = '~/.config/matugen/templates/ghostty'
+# output_path = '~/.config/ghostty/themes/Matugen'
+# post_hook = 'pkill -SIGUSR2 ghostty'
+
+# [templates.starship]
+# input_path = '~/.config/matugen/templates/starship-colors.toml'
+# output_path = '~/.config/starship.toml'
+
+#[templates.gtk3]
+#input_path = '~/.config/matugen/templates/gtk-colors.css'
+#output_path = '~/.config/gtk-3.0/colors.css'
+#post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
+
+#[templates.gtk4]
+#input_path = '~/.config/matugen/templates/gtk-colors.css'
+#output_path = '~/.config/gtk-4.0/colors.css'
+
+#[templates.ignis]
+#input_path = '~/.config/matugen/templates/ignis-colors.scss'
+#output_path = '~/.config/ignis/_colors.scss'

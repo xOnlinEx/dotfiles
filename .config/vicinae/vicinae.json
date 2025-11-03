@@ -1,0 +1,23 @@
+{
+    "closeOnFocusLoss": false,
+    "faviconService": "google",
+    "font": {
+        "normal": "Rubik",
+        "size": 11
+    },
+    "keybinding": "default",
+    "keybinds": {
+    },
+    "popToRootOnClose": true,
+    "rootSearch": {
+        "searchFiles": true
+    },
+    "theme": {
+        "name": "matugen"
+    },
+    "window": {
+        "csd": true,
+        "opacity": 1,
+        "rounding": 10
+    }
+}
