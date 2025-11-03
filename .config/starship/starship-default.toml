@@ -1,0 +1,17 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = false
+
+# Replace the '❯' symbol in the prompt with '➜'
+[character] # The name of the module we are configuring is 'character'
+success_symbol = "[](green bold)"
+error_symbol = "[](red bold)"
+vicmd_symbol = "[V](green bold)"
+vimcmd_replace_one_symbol = "[R](red bold)"
+vimcmd_visual_symbol = "[V](yellow bold)"
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true

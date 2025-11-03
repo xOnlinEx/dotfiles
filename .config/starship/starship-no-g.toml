@@ -1,0 +1,52 @@
+add_newline = false
+
+format="""[arch](blue italic bold) in $directory $git_branch $java$fill\
+\n$character"""
+
+# Prompt symbols
+[character]
+success_symbol = "[](green bold)"
+error_symbol = "[](red bold)"
+vicmd_symbol = "[V](green bold)"
+vimcmd_replace_one_symbol = "[R](red bold)"
+vimcmd_visual_symbol = "[V](yellow bold)"
+
+[directory]
+format = "[$path](purple bold)"
+style = "bg:none fg:8"
+truncation_length = 3
+truncate_to_repo = false
+
+[fill]
+symbol = " "
+
+
+[git_branch]
+format = "on [[ ](green)$branch](green bold)"
+
+[git_status]
+# $all status$ahead_behind
+format = "[]($style)[$all_status$ahead_behind](bg:base fg:yellow)[ ]($style)"
+style = "bg:none fg:base"
+conflicted = "="
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+up_to_date = ""
+untracked = "?${count}"
+stashed = ""
+modified = "!${count}"
+staged = "+${count}"
+renamed = "»${count}"
+deleted = "${count}"
+
+[cmd_duration]
+min_time = 2000
+format = "[]($style)[[󰀠 ](bg:8 fg:red bold)$duration](bg:8 fg:white)[]($style)"
+disabled = false
+style = "bg:none fg:8"
+
+[java]
+format = "via [${symbol}(${version})](red bold)"
+symbol = "[ ](red)"
+version_format = 'v${raw}'
