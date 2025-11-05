@@ -14,8 +14,8 @@ background-opacity = 1.0
 custom-shader = shaders/cursor_warp.glsl
 
 # Theme
-#theme = dark:Dark+,light:Catppuccin Latte
-theme = dark:catppuccin-mocha-dark,light:Catppuccin Latte
+#theme = dark:catppuccin-mocha-dark,light:Catppuccin Latte
+theme = Matugen
 
 # Keybinds
 # keybind = alt+\=new_split:right

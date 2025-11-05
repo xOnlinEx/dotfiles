@@ -17,10 +17,10 @@ input_path = '~/.config/matugen/templates/vicinae.toml'
 output_path = '~/.local/share/vicinae/themes/matugen.toml'
 post_hook = 'vicinae theme set matugen'
 
-# [templates.ghostty]
-# input_path = '~/.config/matugen/templates/ghostty'
-# output_path = '~/.config/ghostty/themes/Matugen'
-# post_hook = 'pkill -SIGUSR2 ghostty'
+[templates.ghostty]
+input_path = '~/.config/matugen/templates/ghostty'
+output_path = '~/.config/ghostty/themes/Matugen'
+post_hook = 'pkill -SIGUSR2 ghostty'
 
 # [templates.starship]
 # input_path = '~/.config/matugen/templates/starship-colors.toml'

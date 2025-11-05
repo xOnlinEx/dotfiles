@@ -22,17 +22,24 @@ return {
     },
   },
   {
-    'Mofiqul/vscode.nvim',
+    "ellisonleao/gruvbox.nvim",
+    priority = 1000,
+    opts = {
+      transparent_mode = true,
+    },
+  },
+  {
+    "Mofiqul/vscode.nvim",
     opts = {
       transparent = true,
       italic_comments = true,
-    }
+    },
   },
   -- Configure LazyVim for colorscheme
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "gruvbox",
     },
   },
 }
