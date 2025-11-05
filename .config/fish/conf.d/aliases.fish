@@ -9,3 +9,6 @@ alias cat=bat
 
 # Paru
 alias paru="paru --limit 5"
+
+# Zeditor
+alias zed="zeditor"
