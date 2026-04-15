@@ -1,0 +1,85 @@
+add_newline = false
+
+format = """$os${custom.sep} $username[@](purple)$hostname ${custom.sep} $directory $git_branch$git_status$java$python $package\
+\n$character"""
+
+[custom.sep]
+command = "echo '•'"
+when = "true"
+format = "[$output](8)"
+
+[character]
+success_symbol = "[❯](green)"
+error_symbol = "[❯](red)"
+vicmd_symbol = "[V](green bold)"
+vimcmd_replace_one_symbol = "[R](red bold)"
+vimcmd_visual_symbol = "[V](yellow bold)"
+
+[directory]
+format = "[󰉋 $path](white)"
+truncation_length = 1
+
+[username]
+format = '[$user](purple)'
+show_always = true
+
+[hostname]
+ssh_only = false
+format = '[$hostname](purple)'
+
+[os]
+format = "[$symbol](blue)"
+disabled = false
+
+[os.symbols]
+Windows = "win"
+Arch = " "
+
+[fill]
+symbol = " "
+
+[git_branch]
+format = "[•](8) [[ ](green)$branch](green)"
+
+[git_status]
+format = ' ([\[$all_status$ahead_behind\]]($style)) '
+style = 'red'
+conflicted = '='
+ahead = '⇡'
+behind = '⇣'
+diverged = '⇕'
+up_to_date = ''
+untracked = '?'
+stashed = '$'
+modified = '!'
+staged = '+'
+renamed = '»'
+deleted = 'X'
+
+[cmd_duration]
+min_time = 2000
+format = "[]($style)[[󰀠 ](bg:8 fg:red bold)$duration](bg:8 fg:white)[]($style)"
+disabled = false
+style = "bg:none fg:8"
+
+[java]
+format = "[•](8) [${symbol}(${version})](cyan)"
+symbol = "[ ](cyan)"
+version_format = 'v${raw}'
+
+[package]
+format = '[•](8) [ $version](yellow)'
+
+[mise]
+disabled = false
+format = '[$symbol$health]($style) '
+symbol = 'mise '
+style = 'green'
+healthy_symbol = ''
+unhealthy_symbol = ''
+
+[python]
+format = '[•](8) [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+version_format = 'v${raw}'
+symbol= ' '
+style = 'yellow'
