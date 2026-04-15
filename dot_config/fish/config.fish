@@ -7,7 +7,7 @@ fish_vi_key_bindings
 
 # Starship
 starship init fish | source
-set -x STARSHIP_CONFIG ~/.config/starship/style-3.toml
+set -x STARSHIP_CONFIG ~/.config/starship/starship.toml
 
 # Zoxide
 zoxide init fish | source

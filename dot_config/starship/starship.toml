@@ -1,52 +1,48 @@
 add_newline = false
 
-format="""$username in $directory $git_branch$git_status $java $package$fill$mise\
+format = """$os${custom.sep} $username[@](purple)$hostname ${custom.sep} $directory $git_branch$git_status$java$python $package\
 \n$character"""
 
-# palette = "kanso_ink"
-#
-# [palettes.kanso_ink]
-# green = "#8a9a7b"
-# magenta = "#a292a3"
-# white = "#c5c9c7"
-# bg_alt = "#393B42"
+[custom.sep]
+command = "echo '•'"
+when = "true"
+format = "[$output](8)"
 
 [character]
-success_symbol = "[](fg:green)"
-error_symbol = "[](fg:red)"
-vicmd_symbol = "[V](fg:green)"
-vimcmd_replace_one_symbol = "[R](fg:red)"
-vimcmd_visual_symbol = "[V](fg:yellow)"
+success_symbol = "[❯](green)"
+error_symbol = "[❯](red)"
+vicmd_symbol = "[V](green bold)"
+vimcmd_replace_one_symbol = "[R](red bold)"
+vimcmd_visual_symbol = "[V](yellow bold)"
 
 [directory]
-format = "[$path](white)"
+format = "[󰉋 $path](white)"
 truncation_length = 1
-truncate_to_repo = false
-truncation_symbol = '../'
 
 [username]
-format = '[$user]($style)'
+format = '[$user](purple)'
 show_always = true
-style_user = 'blue bold'
-style_root = 'magenta bold'
+
+[hostname]
+ssh_only = false
+format = '[$hostname](purple)'
 
 [os]
-format = "[$symbol]($style)"
-style = "fg:blue italic bold"
+format = "[$symbol](blue)"
 disabled = false
 
 [os.symbols]
 Windows = "win"
-Arch = "arch"
+Arch = " "
 
 [fill]
 symbol = " "
 
 [git_branch]
-format = "on [[ ](green)$branch](green)"
+format = "[•](8) [[ ](green)$branch](green)"
 
 [git_status]
-format = ' ([\[$all_status$ahead_behind\]]($style))'
+format = ' ([\[$all_status$ahead_behind\]]($style)) '
 style = 'red'
 conflicted = '='
 ahead = '⇡'
@@ -67,12 +63,12 @@ disabled = false
 style = "bg:none fg:8"
 
 [java]
-format = "via [${symbol}(${version})](red)"
-symbol = "[ ](red)"
+format = "[•](8) [${symbol}(${version})](cyan)"
+symbol = "[ ](cyan)"
 version_format = 'v${raw}'
 
 [package]
-format = ': [ $version](yellow)'
+format = '[•](8) [ $version](yellow)'
 
 [mise]
 disabled = false
@@ -81,3 +77,9 @@ symbol = 'mise '
 style = 'green'
 healthy_symbol = ''
 unhealthy_symbol = ''
+
+[python]
+format = '[•](8) [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+version_format = 'v${raw}'
+symbol= ' '
+style = 'yellow'
