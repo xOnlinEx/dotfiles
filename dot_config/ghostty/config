@@ -1,0 +1,64 @@
+# Font
+font-family = "ZedMono NF"
+# font-style = Medium
+font-size = 18
+adjust-cell-height = 20%
+
+# Window
+window-padding-x = 10
+window-padding-y = 10
+background-opacity = 1.0
+
+# UI
+scrollbar = system
+confirm-close-surface = true
+
+# Notifications
+notify-on-command-finish = unfocused
+notify-on-command-finish-action = bell,notify
+notify-on-command-finish-after = 30s
+
+# Shaders
+custom-shader = shaders/cursor_warp.glsl
+
+# Theme
+# theme = dark:Rose Pine,light:Rose Pine Dawn
+# theme = dark:cyberdream,light:cyberdream-light
+# theme = dark:kanso-zen,light:kanso-pearl
+# theme = dark:Gruvbox Material Dark,light:Gruvbox Material Light
+# theme = dark:Gruvbox Dark,light:Gruvbox Light
+# theme = dark:TokyoNight Night,light:TokyoNight Day
+# theme = dark:melange-dark,light:melange-light
+# theme = dark:kanagawa-dragon,light:kanagawa-lotus
+# theme = dark:Kanagawa Dragon,light:kanagawa-lotus
+# theme = dark:Material Darker,light:Material
+# theme = dark:monokai-pro-ristretto,light:Monokai Pro Light Sun
+# theme = dark:koda-dark,light:koda-light
+# theme = dark:vscode-dark,light:vscode-light
+# theme = dark:Catppuccin Mocha,light:Catppuccin Latte
+# theme = dark:Ayu,light:Ayu Light
+# theme = dark:jellybeans,light:jellybeans-light
+theme = dark:ember,light:ember-light
+# theme = Oxocarbon
+# theme = Vague
+# theme = sora
+# theme = alduin
+# theme = Vesper
+# theme = Moonfly
+# theme = teide_darker
+# theme = gentleman-kanagawa-blur
+# theme = gondolin-dark
+# theme = dark:bamboo,light:bamboo-light
+# theme = dark:tairiki,light:tairiki-light
+
+# Keybinds
+# keybind = alt+\=new_split:right
+# keybind = alt+-=new_split:down
+# keybind = alt+h=goto_split:left
+# keybind = alt+j=goto_split:down
+# keybind = alt+k=goto_split:up
+# keybind = alt+l=goto_split:right
+# keybind = alt+shift+h=resize_split:left,10
+# keybind = alt+shift+j=resize_split:down,10
+# keybind = alt+shift+k=resize_split:up,10
+# keybind = alt+shift+l=resize_split:right,10

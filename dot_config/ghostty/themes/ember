@@ -1,0 +1,44 @@
+# Ember Theme for Ghostty
+# https://github.com/ember-theme/ember
+# Install: cp ember ~/.config/ghostty/themes/ember
+# Usage:   theme = ember
+
+background = #1c1b19
+foreground = #d8d0c0
+
+# Black  → background steps
+palette = 0=#1c1b19
+palette = 8=#3a3830
+
+# Red    → rose (dusty rose)
+palette = 1=#b07878
+palette = 9=#c08888
+
+# Green  → olive
+palette = 2=#8a9868
+palette = 10=#9aaa78
+
+# Yellow → gold
+palette = 3=#c8b468
+palette = 11=#d8c478
+
+# Blue   → steel (muted blue)
+palette = 4=#7890a0
+palette = 12=#88a0b0
+
+# Magenta → mauve (faint violet)
+palette = 5=#988090
+palette = 13=#a890a0
+
+# Cyan   → sage
+palette = 6=#80a090
+palette = 14=#90b0a0
+
+# White  → foreground steps
+palette = 7=#a89880
+palette = 15=#d8d0c0
+
+cursor-color          = #e08060
+cursor-text           = #1c1b19
+selection-background  = #3a3830
+selection-foreground  = #d8d0c0
