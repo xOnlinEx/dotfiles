@@ -1,0 +1,37 @@
+pane	3	0	1	:*	0	~	:/home/xonlinex	1	fish	:bat /home/xonlinex/.config/tmux/resurrect/restore/pane_contents//pane-3:0.0
+pane	4	0	1	:*	0	~	:/home/xonlinex	1	fish	:bat /home/xonlinex/.config/tmux/resurrect/restore/pane_contents//pane-4:0.0
+pane	5	0	1	:*	0	~/d/s/ecommerce-api	:/home/xonlinex/dev/spring/ecommerce-api	1	fish	:bat /home/xonlinex/.config/tmux/resurrect/restore/pane_contents//pane-5:0.0
+pane	6	0	1	:*	0	~	:/home/xonlinex	1	fish	:bat /home/xonlinex/.config/tmux/resurrect/restore/pane_contents//pane-6:0.0
+pane	configs	0	0	:	0	~/.c/starship	:/home/xonlinex/.config/starship	1	fish	:bat /home/xonlinex/.config/tmux/resurrect/restore/pane_contents//pane-configs:0.0
+pane	configs	0	0	:	1	~/d/s/ecommerce-api	:/home/xonlinex/dev/spring/ecommerce-api	0	fish	:bat /home/xonlinex/.config/tmux/resurrect/restore/pane_contents//pane-configs:0.1
+pane	configs	0	0	:	2	nvim config ~/.c/ghostty	:/home/xonlinex/.config/ghostty	0	fish	:bat /home/xonlinex/.config/tmux/resurrect/restore/pane_contents//pane-configs:0.2
+pane	configs	1	0	:	0	nvim ~/.c/tmux	:/home/xonlinex/.config/tmux	1	nvim	:nvim
+pane	configs	2	0	:-	0	~/.c/ghostty	:/home/xonlinex/.config/ghostty	1	fish	:bat /home/xonlinex/.config/tmux/resurrect/restore/pane_contents//pane-configs:2.0
+pane	configs	3	1	:*	0	nvim ~/.c/nvim	:/home/xonlinex/.config/nvim	1	nvim	:nvim
+pane	configs	4	0	:	0	~/.c/fish	:/home/xonlinex/.config/fish	1	fish	:bat /home/xonlinex/.config/tmux/resurrect/restore/pane_contents//pane-configs:4.0
+pane	course-c++	0	1	:*	0	~/d/c/clase-1	:/home/xonlinex/dev/c++/clase-1	1	fish	:
+pane	crud-simple	0	1	:*	0	nvim ~/d/l/crud-simple	:/home/xonlinex/dev/laravel/crud-simple	1	fish	:bat /home/xonlinex/.config/tmux/resurrect/restore/pane_contents//pane-crud-simple:0.0
+pane	crud-simple	1	0	:-	0	~/d/l/crud-simple	:/home/xonlinex/dev/laravel/crud-simple	1	fish	:
+pane	crud-simple	2	0	:	0	docker exec -it my-m ~/.c/nvim	:/home/xonlinex/.config/nvim	1	fish	:bat /home/xonlinex/.config/tmux/resurrect/restore/pane_contents//pane-crud-simple:2.0
+pane	ecommerce	1	1	:*	0	~/d/s/ecommerce-api	:/home/xonlinex/dev/spring/ecommerce-api	1	fish	:
+pane	ecommerce	4	0	:-	0	~/d/s/ecommerce-api	:/home/xonlinex/dev/spring/ecommerce-api	1	fish	:bat /home/xonlinex/.config/tmux/resurrect/restore/pane_contents//pane-ecommerce:4.0
+pane	float-crud-simple	0	1	:*	0	~/d/l/crud-simple	:/home/xonlinex/dev/laravel/crud-simple	1	fish	:bat /home/xonlinex/.config/tmux/resurrect/restore/pane_contents//pane-float-crud-simple:0.0
+pane	float-ecommerce	0	1	:*	0	~/d/s/ecommerce-api	:/home/xonlinex/dev/spring/ecommerce-api	1	fish	:bat /home/xonlinex/.config/tmux/resurrect/restore/pane_contents//pane-float-ecommerce:0.0
+window	3	0	:fish	1	:*	b67e,100x43,0,0,1	:
+window	4	0	:fish	1	:*	b67f,100x43,0,0,2	:
+window	5	0	:fish	1	:*	b680,100x43,0,0,3	:
+window	6	0	:fish	1	:*	b681,100x43,0,0,4	:
+window	configs	0	:starship	0	:	d8cc,100x43,0,0{51x43,0,0,5,48x43,52,0[48x20,52,0,6,48x22,52,21,7]}	off
+window	configs	1	:tmux	0	:	b685,100x43,0,0,8	off
+window	configs	2	:ghostty	0	:-	b686,100x43,0,0,9	off
+window	configs	3	:nvim	1	:*	5b6f,100x43,0,0,10	off
+window	configs	4	:fish	0	:	5b70,100x43,0,0,11	:
+window	course-c++	0	:fish	1	:*	b67d,100x43,0,0,0	:
+window	crud-simple	0	:laravel	1	:*	5b71,100x43,0,0,12	off
+window	crud-simple	1	:fish	0	:-	5b73,100x43,0,0,14	:
+window	crud-simple	2	:fish	0	:	5b74,100x43,0,0,15	:
+window	ecommerce	1	:spring-boot	1	:*	5b75,100x43,0,0,16	off
+window	ecommerce	4	:database	0	:-	5b76,100x43,0,0,17	off
+window	float-crud-simple	0	:fish	1	:*	5b77,100x43,0,0,18	:
+window	float-ecommerce	0	:fish	1	:*	5b78,100x43,0,0,19	:
+state	course-c++	

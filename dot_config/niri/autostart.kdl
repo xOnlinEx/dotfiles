@@ -1,0 +1,19 @@
+spawn-sh-at-startup "vicinae server"
+
+hotkey-overlay {
+    skip-at-startup
+    hide-not-bound
+}
+
+// Apps X11
+xwayland-satellite {
+    path "xwayland-satellite"
+}
+
+// DankMaterialShell
+spawn-sh-at-startup "dms run"
+include "dms-keybinds.kdl"
+layer-rule {
+    match namespace="dms:blurwallpaper"
+    place-within-backdrop true
+}

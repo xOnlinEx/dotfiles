@@ -1,0 +1,9 @@
+// Include
+include "monitors.kdl"
+include "colors.kdl"
+include "layout.kdl"
+include "keybinds.kdl"
+include "rules.kdl"
+include "env.kdl"
+include "input.kdl"
+include "autostart.kdl"

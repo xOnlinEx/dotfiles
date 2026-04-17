@@ -1,0 +1,28 @@
+// ! Auto-generated file with Matugen
+
+layout {
+    background-color "transparent"
+
+    border {
+        active-color   "#d6c3b2"
+        inactive-color "#151312"
+        urgent-color   "#c2c6d2"
+    }
+
+    tab-indicator {
+        active-color   "#d6c3b2"
+        inactive-color "#151312"
+        urgent-color   "#c2c6d2"
+    }
+
+    insert-hint {
+        color "#d6c3b280"
+    }
+}
+
+recent-windows {
+    highlight {
+        active-color   "#d6c3b2"
+        urgent-color   "#c2c6d2"
+    }
+}
