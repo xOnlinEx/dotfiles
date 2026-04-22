@@ -1,0 +1,93 @@
+add_newline = false
+
+# palette = "kanso_ink"
+#
+# [palettes.kanso_ink]
+# green = "#8a9a7b"
+# magenta = "#a292a3"
+# white = "#c5c9c7"
+# bg_alt = "#393B42"
+format = """[╭─](8) $os${custom.sep} $username ${custom.sep} $hostname ${custom.sep} $directory ${custom.sep} $git_branch$git_status ${custom.sep} $java$python ${custom.sep} $package\
+\n[╰─](8)$character"""
+
+[custom.sep]
+command = "echo '//'"
+when = "true"
+format = "[$output](8)"
+
+[character]
+success_symbol = "[](fg:green)"
+error_symbol = "[](fg:red)"
+vicmd_symbol = "[V](fg:green)"
+vimcmd_replace_one_symbol = "[R](fg:red)"
+vimcmd_visual_symbol = "[V](fg:yellow)"
+
+[directory]
+format = "[$path](white)"
+truncation_length = 1
+truncate_to_repo = false
+truncation_symbol = '../'
+
+[username]
+format = '[$user]($style)'
+show_always = true
+style_user = 'blue bold'
+style_root = 'magenta bold'
+
+[hostname]
+ssh_only = false
+format = '[$ssh_symbol](bold blue)[$hostname](bold red)'
+trim_at = '.companyname.com'
+disabled = false
+
+[os]
+format = "[$symbol]($style)"
+style = "blue bold"
+disabled = false
+
+[os.symbols]
+Windows = "win"
+Arch = " "
+
+[fill]
+symbol = " "
+
+[git_branch]
+format = "[[ ](green)$branch](green)"
+
+[git_status]
+format = ' ([\[$all_status$ahead_behind\]]($style))'
+style = 'red'
+conflicted = '='
+ahead = '⇡'
+behind = '⇣'
+diverged = '⇕'
+up_to_date = ''
+untracked = '?'
+stashed = '$'
+modified = '!'
+staged = '+'
+renamed = '»'
+deleted = 'X'
+
+[cmd_duration]
+min_time = 2000
+format = "[]($style)[[󰀠 ](bg:8 fg:red bold)$duration](bg:8 fg:white)[]($style)"
+disabled = false
+style = "bg:none fg:8"
+
+[java]
+format = "[${symbol}(${version})](red)"
+symbol = "[ ](red)"
+version_format = 'v${raw}'
+
+[package]
+format = '[ $version](yellow)'
+
+[mise]
+disabled = false
+format = '[$symbol$health]($style) '
+symbol = 'mise '
+style = 'green'
+healthy_symbol = ''
+unhealthy_symbol = ''
