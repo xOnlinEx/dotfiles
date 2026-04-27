@@ -1,0 +1,13 @@
+// Include
+include optional=true "noctalia/rules.kdl"
+include optional=true "noctalia/keybinds.kdl"
+include optional=true "noctalia/layout.kdl" // !Autogenerate with noctalia user templates
+
+include "monitors.kdl"
+include "layout.kdl"
+include "keybinds.kdl"
+include "rules.kdl"
+include "env.kdl"
+include "input.kdl"
+include "autostart.kdl"
+

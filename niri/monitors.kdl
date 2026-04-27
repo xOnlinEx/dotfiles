@@ -1,0 +1,6 @@
+// Monitor Xiaomi G27Qi
+output "DP-1" {
+  mode "2560x1440@180.000"
+  scale 1
+}
+
