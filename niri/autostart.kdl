@@ -1,5 +1,8 @@
 spawn-sh-at-startup "vicinae server"
 spawn-sh-at-startup "qs -c noctalia-shell"
+spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+spawn-sh-at-startup "dbus-update-activation-environment --all"
+spawn-sh-at-startup "gnome-keyring-daemon --start --components=secrets"
 screenshot-path "~/Pictures/Screenshots/screenshot-%Y-%m-%d-%H-%M-%S.png"
 
 // Apps X11

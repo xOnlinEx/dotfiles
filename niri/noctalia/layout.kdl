@@ -1,0 +1,19 @@
+layout {
+  border {
+    active-color   "#cdbdff"
+    inactive-color "#141218"
+    urgent-color   "#ffaede"
+  }
+  tab-indicator {
+    active-color   "#cdbdff"
+    inactive-color "#141218"
+    urgent-color   "#ffaede"
+  }
+}
+
+recent-windows {
+  highlight {
+    active-color   "#cdbdff"
+    urgent-color   "#ffaede"
+  }
+}
