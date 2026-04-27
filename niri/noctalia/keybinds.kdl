@@ -6,7 +6,7 @@ binds {
     spawn-sh "qs -c noctalia-shell ipc call bar toggle";
   }
   Mod+Shift+Q hotkey-overlay-title="Powermenu" {
-    spawn-sh "dms ipc call powermenu toggle";
+    spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle";
   }
   Mod+Shift+I hotkey-overlay-title="Settings" {
     spawn-sh "qs -c noctalia-shell ipc call settings toggle";
