@@ -1,0 +1,12 @@
+[theme]
+name = "sora"
+
+[colors]
+AlertInfo = "#90c8a0"
+AlertWarn = "#d0a888"
+AlertError = "#d0909c"
+Annotation = "#80c8e0"
+Base = "#c8d0e0"
+Guidance = "#8898b8"
+Important = "#d0909c"
+Title = "#b0a0d8"
