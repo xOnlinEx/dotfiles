@@ -6,79 +6,80 @@ hotkey-overlay {
 }
 
 animations {
-  on
-  slowdown 0.8
+    on
+    slowdown 0.8
 }
 
 blur {
-  passes 3
-  offset 3.0
-  noise 0.03
-  saturation 1.0
+    passes 3
+    offset 3.0
+    noise 0.03
+    saturation 1.0
 }
 
 layout {
-  gaps 5
-  center-focused-column "on-overflow"
-  always-center-single-column
-  default-column-width { proportion 0.66667; }
-  // empty-workspace-above-first
+    gaps 5
+    center-focused-column "on-overflow"
+    always-center-single-column
+    default-column-width { proportion 0.5; }
+    // empty-workspace-above-first
+    background-color "#000000"
 
-  preset-column-widths {
-    proportion 0.33333
-    proportion 0.5
-    proportion 0.66667
-  }
-  focus-ring {
-    off
-  }
-  border {
-    on
-    width 2
-    active-color "#F7DCDE39"
-    inactive-color "#A58A8D30"
-  }
-  shadow {
-    // on
-  }
-  tab-indicator {
-    width 5
-    gap 5
-    length total-proportion=0.5
-    position "top"
-    place-within-column
-    gaps-between-tabs 5
-    corner-radius 10
-  }
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+    focus-ring {
+        off
+    }
+    border {
+        on
+        width 2
+        active-color "#F7DCDE39"
+        inactive-color "#A58A8D30"
+    }
+    shadow {
+        // on
+    }
+    tab-indicator {
+        width 5
+        gap 5
+        length total-proportion=0.5
+        position "top"
+        place-within-column
+        gaps-between-tabs 5
+        corner-radius 10
+    }
 }
 
 overview {
-  zoom 0.75
-  workspace-shadow {
-    on
-  }
+    zoom 0.75
+    workspace-shadow {
+        on
+    }
 }
 
 recent-windows {
-  highlight {
-    padding 20
-    corner-radius 14
-  }
-  previews {
-    max-height 500
-    max-scale 0.5
-  }
-  binds {
-    Alt+Tab          { next-window; }
-    Alt+Shift+Tab    { previous-window; }
-    Alt+Escape       { next-window     filter="app-id"; }
-    Alt+Shift+Escape { previous-window filter="app-id"; }
-  }
+    highlight {
+        padding 20
+        corner-radius 14
+    }
+    previews {
+        max-height 500
+        max-scale 0.5
+    }
+    binds {
+        Alt+Tab          { next-window; }
+        Alt+Shift+Tab    { previous-window; }
+        Alt+Escape       { next-window     filter="app-id"; }
+        Alt+Shift+Escape { previous-window filter="app-id"; }
+    }
 }
 
 cursor {
-  xcursor-theme "Bibata-Original-Classic"
-  xcursor-size 24
-  hide-when-typing
-  hide-after-inactive-ms 5000
+    xcursor-theme "Bibata-Original-Classic"
+    xcursor-size 24
+    hide-when-typing
+    hide-after-inactive-ms 5000
 }

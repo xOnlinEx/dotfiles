@@ -1,25 +1,25 @@
 window-rule {
-  match app-id="zen"
-  match app-id="vesktop"
-  match app-id="spotify"
+    match app-id="zen"
+    match app-id="vesktop"
+    match app-id="spotify"
 
-  open-maximized true
+    open-maximized true
 }
 
 layer-rule {
-  match namespace="vicinae"
-  background-effect {
-    xray false
-  }
+    match namespace="vicinae"
+    background-effect {
+        xray false
+    }
 }
 
 window-rule {
-  geometry-corner-radius 10
-  clip-to-geometry true
-  tiled-state true
-  draw-border-with-background false
-  background-effect {
-    blur true
-    xray false
-  }
+    geometry-corner-radius 10
+    clip-to-geometry true
+    tiled-state true
+    draw-border-with-background false
+    background-effect {
+        blur true
+        xray false
+    }
 }

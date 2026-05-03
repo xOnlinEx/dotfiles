@@ -1,66 +1,66 @@
 // keybinds
 binds {
-  Mod+D hotkey-overlay-title="Toggle dock" {
-    spawn-sh "dms ipc call dock toggle";
-  }
-  Mod+B hotkey-overlay-title="Toggle bar" {
-    spawn-sh "dms ipc call bar toggle index 0";
-  }
-  Mod+Shift+Q hotkey-overlay-title="Powermenu" {
-    spawn-sh "dms ipc call powermenu toggle";
-  }
-  Mod+Shift+I hotkey-overlay-title="Settings" {
-    spawn-sh "dms ipc call settings toggle";
-  }
-  Mod+Shift+W hotkey-overlay-title="Browser Wallpaper" {
-    spawn-sh "dms ipc call dankdash wallpaper";
-  }
-  Mod+Alt+L hotkey-overlay-title="Lock screen" {
-    spawn-sh "dms ipc call lock lock";
-  }
-  Ctrl+Shift+Escape hotkey-overlay-title="Task Manager" {
-    spawn-sh "dms ipc call processlist focusOrToggle";
-  }
-  XF86AudioRaiseVolume allow-when-locked=true {
-    spawn-sh "dms ipc call audio increment 5";
-  }
-  XF86AudioLowerVolume allow-when-locked=true {
-    spawn-sh "dms ipc call audio decrement 5";
-  }
-  XF86AudioMute allow-when-locked=true {
-    spawn-sh "dms ipc call audio mute";
-  }
-  XF86AudioPrev allow-when-locked=true {
-    spawn-sh "dms ipc call mpris previous";
-  }
-  XF86AudioPlay allow-when-locked=true {
-    spawn-sh "dms ipc call mpris playPause";
-  }
-  XF86AudioNext allow-when-locked=true {
-    spawn-sh "dms ipc call mpris next";
-  }
-  XF86MonBrightnessUp allow-when-locked=true {
-    spawn-sh "dms ipc call brightness increment 5 ''";
-  }
-  XF86MonBrightnessDown allow-when-locked=true {
-    spawn-sh "dms ipc call brightness decrement 5 ''";
-  }
-  F12 allow-when-locked=true {
-    spawn-sh "dms ipc call audio increment 5";
-  }
-  F11 allow-when-locked=true {
-    spawn-sh "dms ipc call audio decrement 5";
-  }
-  F10 allow-when-locked=true {
-    spawn-sh "dms ipc call audio mute";
-  }
-  Mod+Shift+N allow-when-locked=true {
-    spawn-sh "dms ipc call mpris previous";
-  }
-  Mod+Shift+B allow-when-locked=true {
-    spawn-sh "dms ipc call mpris playPause";
-  }
-  Mod+Shift+M allow-when-locked=true {
-    spawn-sh "dms ipc call mpris next";
-  }
+    Mod+D hotkey-overlay-title="Toggle dock" {
+        spawn-sh "dms ipc call dock toggle";
+    }
+    Mod+B hotkey-overlay-title="Toggle bar" {
+        spawn-sh "dms ipc call bar toggle index 0";
+    }
+    Mod+Shift+Q hotkey-overlay-title="Powermenu" {
+        spawn-sh "dms ipc call powermenu toggle";
+    }
+    Mod+Shift+I hotkey-overlay-title="Settings" {
+        spawn-sh "dms ipc call settings toggle";
+    }
+    Mod+Shift+W hotkey-overlay-title="Browser Wallpaper" {
+        spawn-sh "dms ipc call dankdash wallpaper";
+    }
+    Mod+Alt+L hotkey-overlay-title="Lock screen" {
+        spawn-sh "dms ipc call lock lock";
+    }
+    Ctrl+Shift+Escape hotkey-overlay-title="Task Manager" {
+        spawn-sh "dms ipc call processlist focusOrToggle";
+    }
+    XF86AudioRaiseVolume allow-when-locked=true {
+        spawn-sh "dms ipc call audio increment 5";
+    }
+    XF86AudioLowerVolume allow-when-locked=true {
+        spawn-sh "dms ipc call audio decrement 5";
+    }
+    XF86AudioMute allow-when-locked=true {
+        spawn-sh "dms ipc call audio mute";
+    }
+    XF86AudioPrev allow-when-locked=true {
+        spawn-sh "dms ipc call mpris previous";
+    }
+    XF86AudioPlay allow-when-locked=true {
+        spawn-sh "dms ipc call mpris playPause";
+    }
+    XF86AudioNext allow-when-locked=true {
+        spawn-sh "dms ipc call mpris next";
+    }
+    XF86MonBrightnessUp allow-when-locked=true {
+        spawn-sh "dms ipc call brightness increment 5 ''";
+    }
+    XF86MonBrightnessDown allow-when-locked=true {
+        spawn-sh "dms ipc call brightness decrement 5 ''";
+    }
+    F12 allow-when-locked=true {
+        spawn-sh "dms ipc call audio increment 5";
+    }
+    F11 allow-when-locked=true {
+        spawn-sh "dms ipc call audio decrement 5";
+    }
+    F10 allow-when-locked=true {
+        spawn-sh "dms ipc call audio mute";
+    }
+    Mod+Shift+N allow-when-locked=true {
+        spawn-sh "dms ipc call mpris previous";
+    }
+    Mod+Shift+B allow-when-locked=true {
+        spawn-sh "dms ipc call mpris playPause";
+    }
+    Mod+Shift+M allow-when-locked=true {
+        spawn-sh "dms ipc call mpris next";
+    }
 }
