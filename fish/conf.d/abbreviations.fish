@@ -10,11 +10,11 @@ abbr --add c clear
 
 # Spring Boot
 abbr -a sinit 'spring init \
-  --build=maven \
-  --dependencies=web,lombok \
-  --group-id=com.example \
-  --artifact-id=demo \
-  --name=demo \
-  --package-name=com.example.demo \
-  --java-version=21 \
-  '
+    --build=maven \
+    --dependencies=web,lombok \
+    --group-id=com.example \
+    --artifact-id=demo \
+    --name=demo \
+    --package-name=com.example.demo \
+    --java-version=21 \
+    '
