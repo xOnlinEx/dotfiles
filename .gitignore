@@ -1,1 +1,6 @@
+# fish_shell
 fish/fish_variables
+
+# tmux
+tmux/plugins/
+tmux/resurrect/
