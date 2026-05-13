@@ -1,20 +1,20 @@
-<details>
-<summary>Tmux</summary>
-
 ### Manual Installation
 
-1. Copy the `tmux` folder to your config directory:
+#### tmux
+
+1. Copy the `tmux` directory into your config folder:
+
 ```bash
-   cp -r tmux ~/.config/
+cp -r tmux ~/.config/
 ```
 
-2. Clone TPM (Tmux Plugin Manager):
+2. Install TPM (Tmux Plugin Manager):
+
 ```bash
-   git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 ```
 
-3. Install plugins:
-   On first launch, enter tmux and press `prefix+I` to install the plugins.
-   > 📝 **Note:** `prefix` is `Ctrl+Space`
+3. Install plugins: On first launch, enter tmux and press `prefix+I` to install the plugins.
 
-</details>
+> [!NOTE]
+> The tmux prefix key is set to `Ctrl + Space`.
