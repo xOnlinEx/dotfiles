@@ -6,11 +6,12 @@ font-size = 17
 # Window
 window-padding-x = 15
 window-padding-y = 15
-background-opacity = 0.90
+background-opacity = 0.9
 
 # UI
 scrollbar = system
 confirm-close-surface = true
+window-theme = system
 
 # Notifications
 notify-on-command-finish = unfocused
@@ -39,10 +40,10 @@ custom-shader = shaders/cursor_warp.glsl
 # theme = dark:Catppuccin Mocha,light:Catppuccin Latte
 # theme = dark:Ayu,light:Ayu Light
 # theme = dark:jellybeans,light:jellybeans-light
-# theme = dark:ember,light:ember-light
+theme = dark:ember,light:ember-light
 # theme = Oxocarbon
 # theme = Vague
-theme = sora
+# theme = sora
 # theme = alduin
 # theme = Vesper
 # theme = Moonfly
