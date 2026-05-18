@@ -13,7 +13,7 @@ animations {
 blur {
     passes 3
     offset 3.0
-    noise 0.03
+    noise 0.04
     saturation 1.0
 }
 

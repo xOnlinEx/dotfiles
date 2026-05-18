@@ -113,6 +113,7 @@ binds {
 
     // Window modes
     Mod+M { maximize-column; }
+    // Mod+Shift+M { expand-column-to-available-width; }
     Mod+F { maximize-window-to-edges; }
     Mod+Shift+F { fullscreen-window; }
     Mod+C { center-column; }

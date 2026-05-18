@@ -4,3 +4,6 @@ fish/fish_variables
 # tmux
 tmux/plugins/
 tmux/resurrect/
+
+# noctalia color generation
+niri/noctalia/layout.kdl

@@ -1,0 +1,12 @@
+[theme]
+name = "ember"
+
+[colors]
+AlertInfo  = "#8a9868"
+AlertWarn  = "#e08060"
+AlertError = "#c8b468"
+Annotation = "#e08060"
+Base       = "#d8d0c0"
+Guidance   = "#7890a0"
+Important  = "#988090"
+Title      = "#7890a0"

@@ -1,19 +1,19 @@
 layout {
     border {
-        active-color   "#bfc2ff"
-        inactive-color "#131318"
-        urgent-color   "#fcadeb"
+        active-color   "#ffb59e"
+        inactive-color "#131313"
+        urgent-color   "#d7c68d"
     }
     tab-indicator {
-        active-color   "#bfc2ff"
-        inactive-color "#131318"
-        urgent-color   "#fcadeb"
+        active-color   "#ffb59e"
+        inactive-color "#131313"
+        urgent-color   "#d7c68d"
     }
 }
 
 recent-windows {
     highlight {
-        active-color   "#bfc2ff"
-        urgent-color   "#fcadeb"
+        active-color   "#ffb59e"
+        urgent-color   "#d7c68d"
     }
 }

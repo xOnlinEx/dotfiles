@@ -1,111 +1,130 @@
 #!/usr/bin/env bash
-# Use system bash (more portable than /bin/bash)
 
-# List of options (your dotfiles folders)
-options=(
-    "fish"
-    "starship"
-    "ghostty"
-    "hyprland"
-    "matugen"
-    "bat"
-    "fastfetch"
-    "kitty"
-    "tmux"
-    "vicinae"
-    "yazi"
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+
+log() { echo -e "${BLUE}==>${NC} $1"; }
+ok() { echo -e "${GREEN} ✓${NC} $1"; }
+warn() { echo -e "${YELLOW} !${NC} $1"; }
+err() { echo -e "${RED} ✗${NC} $1"; }
+
+install() {
+    local category="$1"
+    shift
+    log "Installing $category..."
+    paru -S --needed --noconfirm "$@"
+    ok "$category installed"
+}
+
+# ── Core / CLI tools ────────────────────────────────────────────
+CORE=(
+    git
+    curl
+    wget
+    less
+    unzip
+    unrar
+    minizip
+    ffmpeg
+    imagemagick
 )
 
-# Parallel array to store selection state (1 = selected, 0/empty = not selected)
-selected=()
+# ── Shell ───────────────────────────────────────────────────────
+SHELL=(
+    fish
+    starship
+    atuin
+    fzf
+    zoxide
+)
 
-# Current cursor position (index in the menu)
-cursor=0
+# ── Terminal tools ──────────────────────────────────────────────
+TERMINAL=(
+    bat
+    eza
+    yazi
+    lazygit
+    neovim
+    tmux
+)
 
-# Function to draw the menu on screen
-draw() {
-    clear # clear terminal
-    echo "↑ ↓ or j/k to move | SPACE to toggle | ENTER to confirm"
-    echo
+# ── Desktop / Wayland ───────────────────────────────────────────
+DESKTOP=(
+    niri
+    sddm
+    ghostty
+    wl-clipboard
+    xdg-desktop-portal
+    xdg-desktop-portal-gnome
+    xdg-desktop-portal-gtk
+)
 
-    # Loop through all options
-    for i in "${!options[@]}"; do
-        mark="[ ]"                               # default: not selected
-        [[ ${selected[$i]} == 1 ]] && mark="[x]" # if selected → [x]
+# ── Audio ───────────────────────────────────────────────────────
+AUDIO=(
+    pipewire
+    pipewire-pulse
+    pipewire-jack
+    cava
+)
 
-        # Highlight current cursor position
-        if [[ $i -eq $cursor ]]; then
-            echo -e "> $mark ${options[$i]}"
-        else
-            echo "  $mark ${options[$i]}"
-        fi
-    done
+# ── Fonts ───────────────────────────────────────────────────────
+FONTS=(
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+    ttf-rubik-vf
+    ttf-zed-mono-nerd
+)
+
+# ── Themes / Appearance ─────────────────────────────────────────
+APPEARANCE=(
+    bibata-cursor-theme-bin
+    noctalia-shell
+    vicinae-bin
+)
+
+# ── Apps ────────────────────────────────────────────────────────
+APPS=(
+    nautilus
+    loupe
+    totem
+    decibels
+    papers
+    gapless
+    zen-browser-bin
+)
+
+# ── Bluetooth ───────────────────────────────────────────────────
+BLUETOOTH=(
+    bluez
+    bluez-utils
+)
+
+# ════════════════════════════════════════════════════════════════
+
+warn "Back up your config files before proceeding."
+echo
+read -rp "Continue? [y/N] " confirm
+[[ "$confirm" =~ ^[Yy]$ ]] || {
+    err "Aborted."
+    exit 1
 }
 
-# Toggle selection on current item
-toggle() {
-    if [[ ${selected[$cursor]} == 1 ]]; then
-        selected[$cursor]=0 # unselect
-    else
-        selected[$cursor]=1 # select
-    fi
-}
-
-# Main loop (interactive menu)
-while true; do
-    draw # render menu
-
-    # Read a single key (silent, no Enter required)
-    IFS= read -rsn1 key
-
-    # Handle arrow keys (escape sequence)
-    if [[ $key == $'\x1b' ]]; then
-        read -rsn2 key # read remaining chars
-        case $key in
-        "[A") ((cursor--)) ;; # arrow up
-        "[B") ((cursor++)) ;; # arrow down
-        esac
-
-    # Vim-style navigation
-    elif [[ $key == "k" ]]; then
-        ((cursor--)) # move up
-    elif [[ $key == "j" ]]; then
-        ((cursor++)) # move down
-
-    # SPACE → toggle selection
-    elif [[ $key == $' ' ]]; then
-        toggle
-
-    # ENTER → exit menu
-    elif [[ -z $key || $key == $'\n' ]]; then
-        break
-    fi
-
-    # Keep cursor within bounds
-    ((cursor < 0)) && cursor=0
-    ((cursor >= ${#options[@]})) && cursor=$((${#options[@]} - 1))
-done
-
-# Clear screen before running actions
-clear
-echo "Installing selected configs..."
 echo
 
-# Loop through selected options
-for i in "${!options[@]}"; do
-    if [[ ${selected[$i]} == 1 ]]; then
-        option="${options[$i]}"
-
-        echo "→ Installing $option"
-
-        # Remove existing config in ~/.config
-        rm -rf "$HOME/.config/$option"
-
-        # Create symlink from current repo → ~/.config
-        # This allows real-time updates when using git
-        ln -s "$(pwd)/$option" "$HOME/.config/$option"
-    fi
-done
+install "Core tools" "${CORE[@]}"
+install "Shell" "${SHELL[@]}"
+install "Terminal tools" "${TERMINAL[@]}"
+install "Desktop" "${DESKTOP[@]}"
+install "Audio" "${AUDIO[@]}"
+install "Fonts" "${FONTS[@]}"
+install "Appearance" "${APPEARANCE[@]}"
+install "Apps" "${APPS[@]}"
+install "Bluetooth" "${BLUETOOTH[@]}"
 
 echo
-echo "Done ✅"
+ok "All done!"

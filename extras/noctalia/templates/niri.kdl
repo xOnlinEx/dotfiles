@@ -1,0 +1,19 @@
+layout {
+    border {
+        active-color   "{{colors.primary.default.hex}}"
+        inactive-color "{{colors.background.default.hex}}"
+        urgent-color   "{{colors.tertiary.default.hex}}"
+    }
+    tab-indicator {
+        active-color   "{{colors.primary.default.hex}}"
+        inactive-color "{{colors.background.default.hex}}"
+        urgent-color   "{{colors.tertiary.default.hex}}"
+    }
+}
+
+recent-windows {
+    highlight {
+        active-color   "{{colors.primary.default.hex}}"
+        urgent-color   "{{colors.tertiary.default.hex}}"
+    }
+}

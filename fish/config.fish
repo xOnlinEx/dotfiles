@@ -16,4 +16,4 @@ zoxide init fish | source
 atuin init fish | source
 
 # Mise
-mise activate fish | source
+# mise activate fish | source
