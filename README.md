@@ -20,10 +20,10 @@ paru -S lazygit starship atuin fzf bat eza fish ghostty niri yazi zoxide \
     noto-fonts-cjk noto-fonts-emoji ttf-rubik-vf bibata-cursor-theme-bin bluez bluez-utils \
     cava curl wget ffpmeg imagemagick less minizip unzip unrar neovim pipewire-jack sddm tmux \
     ttf-zed-mono-nerd wl-clipboard xdg-desktop-portal xdg-desktop-portal-gnome xdg-desktop-portal-gtk \
-    loupe totem decibels papers gapless zen-browser-bin adw-gtk-theme nwg-look
+    loupe totem papers gapless zen-browser-bin adw-gtk-theme nwg-look
 
 ```
-#### Copiar los archivos de configuracion
+#### Copy the configuration files
 
 ```bash
 cp -r niri ~/.config # example
@@ -36,6 +36,11 @@ cp -r niri ~/.config # example
 Some steps require manual action after installation.
 
 ### tmux
+
+Clone `TPM` (Tmux Plugin Manager)
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+```
 
 Open tmux and press `Ctrl+Space` + `I` to install the plugins.
 
