@@ -6,12 +6,14 @@ font-size = 17
 # Window
 window-padding-x = 15
 window-padding-y = 15
-background-opacity = 0.9
+background-opacity = 0.8
 
 # UI
 scrollbar = system
 confirm-close-surface = true
 window-theme = system
+confirm-close-surface = false
+window-save-state = never
 
 # Notifications
 notify-on-command-finish = unfocused

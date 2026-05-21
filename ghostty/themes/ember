@@ -1,7 +1,8 @@
 # Ember — dark variant
 # Source: https://github.com/ember-theme/ember/blob/main/palette.json
 
-background = #1c1b19
+# background = #1c1b19
+background = #151412
 foreground = #d8d0c0
 cursor-color = #e08060
 cursor-text = #1c1b19
