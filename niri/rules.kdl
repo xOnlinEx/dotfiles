@@ -2,7 +2,6 @@ window-rule {
     match app-id="zen"
     match app-id="vesktop"
     match app-id="spotify"
-
     open-maximized true
 }
 
@@ -12,9 +11,26 @@ layer-rule {
         xray false
     }
 }
+window-rule {
+    match app-id="com.github.neithern.g4music|org.gnome.Nautilus"
+    opacity 0.95
+    /- popups { // bug in blur popups
+        background-effect {
+            xray false
+            blur true
+        }
+    }
+}
 
 window-rule {
-    geometry-corner-radius 10
+    match app-id="org.gnome.Nautilus" title=".*(File|Save|Open|Upload).*"
+    open-floating true
+    default-window-height { fixed  800; }
+    default-column-width  { fixed 1200; }
+}
+
+window-rule {
+    geometry-corner-radius 16
     clip-to-geometry true
     tiled-state true
     draw-border-with-background false

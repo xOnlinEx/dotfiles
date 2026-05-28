@@ -1,49 +1,51 @@
 add_newline = false
 
-format = """$cmd_duration ${custom.sep} $directory $git_branch$git_status$java$python $package\
+format = """$directory$git_branch$git_status$java$python$package\
 \n$character"""
 
 [custom.sep]
-command = "echo ''"
+command = "echo '|'"
 when = "true"
 format = "[$output](8)"
 
 [character]
-success_symbol = "[](green)"
+success_symbol = "[>](green)"
 error_symbol = "[>](red)"
 vicmd_symbol = "[V](green bold)"
 vimcmd_replace_one_symbol = "[R](red bold)"
 vimcmd_visual_symbol = "[V](yellow bold)"
 
 [directory]
-format = "[ $path](white)"
+format = "[ $path](purple)"
 truncation_length = 1
-truncation_symbol = '../'
+# truncation_symbol = '../'
 
 [username]
-format = '[$user](purple)'
+format = '[$user](blue)'
 show_always = true
 
 [hostname]
 ssh_only = false
-format = '[$hostname](purple)'
+format = '[$hostname](blue)'
 
 [os]
 format = "[$symbol](blue)"
 disabled = false
 
 [os.symbols]
-Windows = "win"
-Arch = "󰣇 "
+Windows = ""
+Arch = "󰣇"
+NixOS = "󱄅"
+
 
 [fill]
 symbol = " "
 
 [git_branch]
-format = "[•](8) [[ ](green)$branch](green)"
+format = " [|](8) [[ ](green)$branch](green) "
 
 [git_status]
-format = ' ([\[$all_status$ahead_behind\]]($style)) '
+format = '([\[$all_status$ahead_behind\]]($style))'
 style = 'red'
 conflicted = '='
 ahead = '⇡'
@@ -58,29 +60,20 @@ renamed = '»'
 deleted = 'X'
 
 [cmd_duration]
-min_time = 0
+min_time = 60
 format = "[[󰪢 ](red)$duration](fg:white)"
-# format = '[](bold fg:252)[󰪢 $duration](bold bg:252 fg:235)[](bold fg:252)'
 disabled = false
 
 [java]
-format = "[•](8) [${symbol}(${version})](red)"
+format = " [|](8) [${symbol}(${version})](red)"
 symbol = "[ ](red)"
 version_format = 'v${raw}'
 
 [package]
-format = '[•](8) [ $version](yellow)'
-
-[mise]
-disabled = false
-format = '[$symbol$health]($style) '
-symbol = 'mise '
-style = 'green'
-healthy_symbol = ''
-unhealthy_symbol = ''
+format = ' [|](8) [ $version](yellow)'
 
 [python]
-format = '[•](8) [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+format = ' [|](8) [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 version_format = 'v${raw}'
 symbol= ' '
 style = 'yellow'

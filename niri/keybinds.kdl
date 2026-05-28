@@ -24,7 +24,9 @@ binds {
         "screenshot";
     }
     Mod+P hotkey-overlay-title="Color Picker" {
-        spawn-sh "COLOR=$(niri msg pick-color | grep -oP '#[0-9A-Fa-f]{6}') && echo -n $COLOR | wl-copy -n && convert -size 64x64 xc:\"$COLOR\" /tmp/pick-color.png && notify-send 'HEX ' $COLOR -i /tmp/pick-color.png --app-name='Niri pick-color'";
+        spawn-sh "COLOR=$(niri msg pick-color |
+            grep -oP '#[0-9A-Fa-f]{6}') && echo -n $COLOR |
+            wl-copy -n && convert -size 64x64 xc:\"$COLOR\" /tmp/pick-color.png && notify-send 'HEX ' $COLOR -i /tmp/pick-color.png --app-name='Niri pick-color'";
     }
 
     // Window management
@@ -113,7 +115,7 @@ binds {
 
     // Window modes
     Mod+M { maximize-column; }
-    // Mod+Shift+M { expand-column-to-available-width; }
+    Mod+Shift+M { expand-column-to-available-width; }
     Mod+F { maximize-window-to-edges; }
     Mod+Shift+F { fullscreen-window; }
     Mod+C { center-column; }

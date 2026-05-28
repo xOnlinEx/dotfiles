@@ -35,13 +35,13 @@ binds {
     F10 allow-when-locked=true {
         spawn-sh "qs -c noctalia-shell ipc call volume muteOutput";
     }
-    Mod+Shift+N allow-when-locked=true {
-        spawn-sh "qs -c noctalia-shell ipc call media previous";
+    F9 allow-when-locked=true {
+        spawn-sh "qs -c noctalia-shell ipc call media next";
     }
-    Mod+Shift+B allow-when-locked=true {
+    F8 allow-when-locked=true {
         spawn-sh "qs -c noctalia-shell ipc call media playPause";
     }
-    Mod+Shift+M allow-when-locked=true {
-        spawn-sh "qs -c noctalia-shell ipc call media next";
+    F7 allow-when-locked=true {
+        spawn-sh "qs -c noctalia-shell ipc call media previous";
     }
 }
