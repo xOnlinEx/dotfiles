@@ -17,5 +17,5 @@ Open tmux and press `Ctrl+Space` + `I` to install the plugins.
 Set fish as your default shell:
 
 ```bash
-chsh -s $(which fish)
+chsh -s /usr/bin/fish
 ```
